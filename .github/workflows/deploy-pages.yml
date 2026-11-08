@@ -31,6 +31,8 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: npm run build
+      - name: Verify landing entry point
+        run: node -e "const fs=require('node:fs'); const html=fs.readFileSync('out/index.html','utf8'); if(!html.includes('NO ES SOLO') || html.includes('Instalar dependencias con')) throw new Error('The artifact must contain the landing page, not the README');"
       - name: Disable Jekyll processing
         run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
