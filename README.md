@@ -20,4 +20,3 @@ Instalar dependencias con `npm install` y ejecutar `npm run dev`. Para producci�
 - No requiere Supabase para esta landing. El futuro sistema de pedidos e inventario se integrará en una etapa posterior.
 
 Los enlaces externos requieren conexión. Las fuentes de Google tienen alternativas locales; el mapa incluye enlace alternativo a Google Maps.
-
